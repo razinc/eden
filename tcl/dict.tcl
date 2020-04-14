@@ -31,7 +31,6 @@ foreach key [dict keys $fruits] {
 
 # TODO: check if value in nested dict
 
-
 # append dict
 dict lappend fruits fruits_4 name lemon total 6
 puts $fruits
