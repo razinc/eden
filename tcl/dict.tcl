@@ -29,6 +29,7 @@ puts $fruits
 set fruits [lsort -integer -stride 2 -index {end end} $fruits]
 puts $fruits
 set fruits [lsort -integer -stride 2 -index {end 3} $fruits]
+puts $fruits
 
 # sort (decreasing)
 set fruits [lsort -integer -decreasing -stride 2 -index {end end} $fruits]
