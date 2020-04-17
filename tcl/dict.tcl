@@ -17,6 +17,9 @@ foreach key [dict keys $fruits] {
     puts $value
     
     # TODO: print nested key
+    foreach key [dict keys $value] {
+        puts $key
+    }
     
     # print nested value
     set fruit_name [dict get $value name]
@@ -36,8 +39,6 @@ dict lappend fruits fruits_4 name lemon total 6
 puts $fruits
 
 # TODO: delete dict
-
-# TODO: update dict
 
 # sort (increasing)
 set fruits [lsort -integer -stride 2 -index {end end} $fruits]
