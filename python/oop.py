@@ -45,6 +45,37 @@ class Employee:
         else:
             return True
 
+class Developer(Employee):
+
+    # overwrite parent's attribute
+    raise_amount = 1.5
+
+    # add new attribute to constructor
+    def __init__(self, firstn, lastn, pay, prog_lang):
+        super().__init__(firstn, lastn, pay)
+        self.prog_lang = prog_lang
+
+class Manager(Employee):
+    def __init__(self, firstn, lastn, pay, employees = None):
+        super().__init__(firstn, lastn, pay)
+        if employees is None:
+            self.employees = []
+        else:
+            self.employees = employees
+
+    def add_emp(self, emp):
+        if emp not in self.employees:
+            self.employees.append(emp)
+
+    def del_emp(self, emp):
+        if emp in self.employees:
+            self.employees.remove(emp)
+
+    def print_emps(self):
+        for emp in self.employees:
+            print(f"--> {emp.full_name()}")                
+
+
 emp_1 = Employee("Bruce", "Wayne", 5000)
 emp_2 = Employee("Clark", "Kent", 200)
 
@@ -98,3 +129,24 @@ print(emp_3.email)
 import datetime
 my_date = datetime.date(2016, 7, 11)
 print(Employee.is_working_day(my_date))
+
+####################################################################################################
+# Tutorial 4                                                                                       # 
+# Inheritance - Creating Subclasses                                                                #
+# https://www.youtube.com/watch?v=RSl87lqOXDE&list=PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc&index=5&t=0s #
+####################################################################################################
+
+emp_4 = Developer("Oliver", "Queen", 2000, "C++")
+print(emp_4.email)
+print(emp_4.prog_lang)
+
+mngr_1 = Manager("Barry", "Allen", 5500, [emp_1])
+print(mngr_1.email)
+mngr_1.print_emps()
+mngr_1.add_emp(emp_2)
+mngr_1.print_emps()
+mngr_1.del_emp(emp_1)
+mngr_1.print_emps()
+
+print(isinstance(mngr_1, Manager))
+print(issubclass(Manager, Developer))
