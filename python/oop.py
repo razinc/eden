@@ -17,6 +17,7 @@ class Employee:
     def __init__(self, firstn, lastn, pay):
         self.firstn = firstn
         self.lastn = lastn
+        self.pay = pay
         self.email = f"{firstn}.{lastn}@company.com"
 
         Employee.no_of_emps += 1
@@ -44,6 +45,32 @@ class Employee:
             return False
         else:
             return True
+
+    # good practice: print message to recreate object
+    def __repr__(self):
+        return f"Employee({self.firstn}, {self.lastn}, {self.pay})"
+
+    # print redeable message
+    def __str__(self):
+        return f"{self.full_name()} - {self.email}"
+
+    def __add__(self, other):
+        return self.pay + other.pay
+
+    @property
+    def email_dec(self):
+        return f"{self.firstn}.{self.lastn}@company.com"
+
+    @email_dec.setter
+    def email_dec(self, email):
+        self.firstn, self.lastn = email.strip("@company.com").split(".")
+
+    @email_dec.deleter
+    def email_dec(self):
+        print("Delete First Name & Last Name")
+        self.firstn = None
+        self.lastn = None
+
 
 class Developer(Employee):
 
@@ -150,3 +177,36 @@ mngr_1.print_emps()
 
 print(isinstance(mngr_1, Manager))
 print(issubclass(Manager, Developer))
+
+####################################################################################################
+# Tutorial 5                                                                                       # 
+# Special Methods (Dunder Methods)                                                                 #
+# https://www.youtube.com/watch?v=3ohzBxoFHAY&list=PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc&index=6&t=0s #
+####################################################################################################
+
+print(emp_1)
+print(repr(emp_1))
+print(emp_1.__repr__())
+print(str(emp_1))
+print(emp_1.__str__())
+
+print(emp_1 + emp_2)
+
+####################################################################################################
+# Tutorial 6                                                                                       # 
+# Decorator (Getters, Setters, Deleters)                                                           #
+# https://www.youtube.com/watch?v=jCzT9XFZ5bw&list=PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc&index=7&t=0s #
+####################################################################################################
+
+emp_1.firstn = "Thomas"
+print(emp_1.firstn)
+print(emp_1.email)
+print(emp_1.email_dec)
+
+emp_1.email_dec = "Martha.Wayne@compay.com"
+print(emp_1.firstn)
+print(emp_1.lastn)
+
+del emp_1.email_dec
+print(emp_1.firstn)
+print(emp_1.lastn)
