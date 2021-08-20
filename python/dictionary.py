@@ -14,8 +14,10 @@ for key, value in person.items():
     print(key, value)
 
 # sort dict based on value
-d = {'KEY1':{'name':'google','date':20100701,'downloads':0},
- 'KEY2':{'name':'chrome','date':20071010,'downloads':100},
- 'KEY3':{'name':'python','date':20100710,'downloads':90}}
-d = sorted(d.items(), key = lambda tup: tup[1]["downloads"])
-print(json.dumps(d, indent = 4))
+from collections import OrderedDict
+from operator import getitem
+d = {"Apple" : {"Colour" : "Red", "Count" : 23},
+    "Grape" : {"Colour" : "Purple", "Count" : 11}, 
+    "Melon" : {"Colour" : "Green", "Count" : 34}}
+d_mark_sort = OrderedDict(sorted(d.items(), key = lambda x: getitem(x[1], "Count")))
+print(d_mark_sort)
