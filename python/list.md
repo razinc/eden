@@ -1,5 +1,12 @@
 # List Comprehension
 
+## String Splitting
+```python
+my_string = "this is a string"
+my_list = list(my_string)
+print(my_list)
+# ['t', 'h', 'i', 's', ' ', 'i', 's', ' ', 'a', ' ', 's', 't', 'r', 'i', 'n', 'g']
+```
 ## Create a list
 ```python
 nums = [i for i in range(10)]
