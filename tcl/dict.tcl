@@ -3,9 +3,9 @@ set fruits [dict create]
 
 # initialize dict
 set fruits [dict create  fruit_1 [dict create name apple total 2] \
-    fruit_2 [dict create name grape total 10] \
-    fruit_3 [dict create name banana total 4] \
-    ]
+                         fruit_2 [dict create name grape total 10] \
+                         fruit_3 [dict create name banana total 4] \
+                         ]
 
 # prints dict's info
 foreach key [dict keys $fruits] {
