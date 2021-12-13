@@ -10,7 +10,7 @@ print(my_list)
 
 # List Comprehension
 
-## Create a list
+## Create a List
 ```python
 nums = [i for i in range(10)]
 print(nums)
