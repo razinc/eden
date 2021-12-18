@@ -8,6 +8,15 @@ print(my_list)
 # ['t', 'h', 'i', 's', ' ', 'i', 's', ' ', 'a', ' ', 's', 't', 'r', 'i', 'n', 'g']
 ```
 
+# Sorting
+
+```python
+my_list = test_list = ["dir_79", "dir_8", "dir_80"]
+my_list.sort(key = lambda x:int(x.replace("dir_", "")))
+print(my_list)
+# ['dir_8', 'dir_79', 'dir_80']
+```
+
 # List Comprehension
 
 ## Create a List
