@@ -1,5 +1,11 @@
 person = {"name": "Ali", "age": 18, "phone": 123456}
 
+# check if key exist
+print(person.get("name"))
+# Ali
+print(person.get("sex"))
+# None
+
 # get all keys
 print(person.keys())
 
