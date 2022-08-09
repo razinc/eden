@@ -15,6 +15,9 @@ print(person.values())
 # get both keys & values
 print(person.items())
 
+# add new key value pair into a dict
+person["sex"] = "male"
+
 # loop dict
 for key, value in person.items():
     print(key, value)
