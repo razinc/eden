@@ -12,8 +12,13 @@
    .
    ```
 
-- Can’t change custom artwork on Steam? Remove from collection.
 
+# Gaming
+
+- [General setup](https://www.reddit.com/r/linux_gaming/comments/zf6yer/setting_up_your_linux_gaming_system/)
+- [MangoHUD setup](https://www.reddit.com/r/linux_gaming/comments/gbrnj1/how_to_install_and_use_mangohud_with_game/)
+- [`gamemodrun` setup](https://www.reddit.com/r/linux/comments/1ff2aru/til_always_use_gamemoderun_for_proton_games/)
+- Can’t change custom artwork on Steam? Remove from collection.
 
 # BKM
 
@@ -22,4 +27,3 @@
   python -m pip <pip arguments>
   ```
 
-- [Gaming setup](https://www.reddit.com/r/linux_gaming/comments/zf6yer/setting_up_your_linux_gaming_system/)
