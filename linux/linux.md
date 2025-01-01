@@ -11,7 +11,12 @@
    .
    .
    ```
+ - [Firefox keeps crashing.](https://www.reddit.com/r/firefox/comments/1ebygmt/firefox_crashing_on_fedora_40_with_and_without/)
 
+   Add this in `/etc/environment`
+   ```
+   MOZ_ENABLE_WAYLAND=0
+   ```
 
 # Gaming
 
