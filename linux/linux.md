@@ -17,6 +17,7 @@
    ```
    MOZ_ENABLE_WAYLAND=0
    ```
+   [Additional reference on Arch's Wiki.](https://wiki.archlinux.org/title/Firefox#Xwayland)
 
 # Gaming
 
