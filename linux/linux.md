@@ -32,4 +32,9 @@
   ```
   python -m pip <pip arguments>
   ```
+# Tools
 
+## Testing
+
+- `memtest86+`: Check memory stick health.
+- `cpu-x`: Check if GPU ReBAR is enabled.
