@@ -1,3 +1,7 @@
+# BIOS
+- Enable re-Size BAR support.
+- Disable fast boot.
+
 # BKM
 
 - Pip
