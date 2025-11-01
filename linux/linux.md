@@ -40,5 +40,9 @@
 
 # Testing
 
+## Stress Testing
+- `mprime`: Check CPU health.
 - `memtest86+`: Check memory stick health.
+
+## General Monitoring
 - `cpu-x`: Check if GPU ReBAR is enabled.
