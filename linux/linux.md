@@ -40,7 +40,7 @@
 
 # Testing
 
-## Stress Testing
+## [Stress Testing](https://wiki.archlinux.org/title/Stress_testing#MPrime)
 - `mprime`: Check CPU health.
 - `memtest86+`: Check memory stick health.
 
