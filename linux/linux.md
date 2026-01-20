@@ -45,4 +45,4 @@
 - `memtest86+`: Check memory stick health.
 
 ## General Monitoring
-- `cpu-x`: Check if GPU ReBAR is enabled.
+- `cpu-x`: Check if GPU ReBAR is enabled. You can also use [this](https://www.reddit.com/r/linux_gaming/comments/11njsw3/how_do_i_verify_that_amd_smart_access_memory_is/jbnkddj/).
