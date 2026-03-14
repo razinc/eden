@@ -37,6 +37,11 @@
       ```
       [Additional reference on Arch's Wiki.](https://wiki.archlinux.org/title/Firefox#Xwayland)
    - Test memory health.
+- [Turned bluetooth speaker off after idle time.](https://askubuntu.com/questions/1264315/bluetooth-keyboard-and-mouse-disconnect-when-idle-for-a-few-seconds-and-reconnec)
+   - Add this in `/etc/bluetooth/main.conf`
+     ```
+     IdleTimeout = 3600
+     ```
 
 # Testing
 
